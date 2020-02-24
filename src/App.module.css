@@ -1,0 +1,10 @@
+.wrapper {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 rgba(155, 155, 155, .9);
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}

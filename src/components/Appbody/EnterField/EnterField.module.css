@@ -1,0 +1,9 @@
+.enterInput {
+    font-size: 26px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.enterInput:focus {
+    border-color: #000;
+}
