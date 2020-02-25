@@ -10,10 +10,28 @@ const Deal = (props) => {
         onBlurHandler = (e) => {
             let targetInput = e.target.closest(`.${s.inputWrapper}`).querySelector(`.${s.dealItem}`);
             targetInput.disabled = true;
-        }
+        },
+        finishEdit = (e) => {
+            if (e.keyCode == 13) {
+                onBlurHandler(e);
+            }
+        },
+        wrapperClasses;
+
+    if (props.status == true) {
+        wrapperClasses = `${s.inputWrapper} ${s.complete}`;
+    } else {
+        wrapperClasses = `${s.inputWrapper}`;
+    }
 
     return (
-        <div className={s.inputWrapper}>
+        <div className={wrapperClasses}>
+            <button 
+                className={s.check}
+                onClick={props.checkDeal}
+                >
+                <i className="far fa-check-circle"></i>
+            </button>
             <input 
                 disabled 
                 type="text" 
@@ -21,6 +39,7 @@ const Deal = (props) => {
                 className={s.dealItem} 
                 onBlur={onBlurHandler}
                 onChange={props.editOldDeal}
+                onKeyDown={finishEdit}
             />
             <div className={s.tools}>
                 <span className={s.edit} onClick={editThis}>

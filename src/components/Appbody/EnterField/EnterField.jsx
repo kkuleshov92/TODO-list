@@ -25,7 +25,7 @@ const EnterField = (props) => {
             <input 
                 type="text" 
                 value={props.currentValue} 
-                placeholder="Enter task" 
+                placeholder="Enter your task" 
                 className={s.enterInput} 
                 onChange={changeInput}
                 onKeyDown={enterEvent}

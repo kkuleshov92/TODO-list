@@ -3,11 +3,13 @@ let store =  {
         deals : [
             {
                 text: 'Cleaning',
-                newText : ''
+                newText: '',
+                status: false
             },
             {
                 text: 'Homework',
-                newText : ''
+                newText: '',
+                status: true
             }
         ],
         newDealText : ''
@@ -38,7 +40,7 @@ let store =  {
         let newTask = {
             id : this._state.deals.length + 1,
             text : this._state.newDealText,
-            status : true
+            status : false
         }
 
         this._state.deals.push(newTask);
@@ -46,8 +48,9 @@ let store =  {
 
         this.reRender();
     },
-    removeTask() {
-        
+    checkDeal(index) {
+        this._state.deals[index].status = !this._state.deals[index].status;
+        this.reRender();
     }
 }
 

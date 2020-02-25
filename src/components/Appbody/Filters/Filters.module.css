@@ -1,0 +1,41 @@
+.filterWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.filterWrapper button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.accomplished {
+    width: calc(50% - 5px);
+}
+
+.inProcess {
+    width: calc(50% - 5px);
+}
+
+.all {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.filterWrapper button:hover {
+    border-width: 3px;
+}
+
+.filterWrapper button.active {
+    font-weight: 700;
+}
+
+button:focus {
+    outline: none;
+}
